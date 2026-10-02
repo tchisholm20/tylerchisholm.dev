@@ -1,0 +1,511 @@
+{
+ "header": {
+  "name": "Tyler Chisholm",
+  "contact": [
+   "Orlando, FL",
+   "(832) 630-3648",
+   "tchisholm2020@gmail.com",
+   "tylerchisholm.dev",
+   "youtube.com/@tylerchisholm2682"
+  ]
+ },
+ "education": [
+  {
+   "left": "M.S. Interactive Entertainment",
+   "org": "Florida Interactive Entertainment Academy (FIEA), University of Central Florida",
+   "date": "Dec 2026",
+   "note": "12 games built across 4 semesters in UE5, Unity and VR."
+  },
+  {
+   "left": "B.B.A. Finance & Entrepreneurship",
+   "org": "Stetson University, DeLand, FL",
+   "date": "May 2024",
+   "note": ""
+  }
+ ],
+ "variants": {
+  "D": {
+   "file": "Tyler_Chisholm_Resume_Technical_Designer",
+   "title": "Technical Designer",
+   "summary": "Technical designer who designs a system and builds it: gameplay C++ and Blueprint in UE5, C# in Unity, editor tools for the designers who tune it, and the docs that keep a team aligned. Led design on a UE5 capstone headed to Steam; deep rendering background.",
+   "skills": [
+    [
+     "Design",
+     "Systems and mechanics design, GDDs and one-page specs, rapid prototyping, economy and balance modeling, playtest analysis"
+    ],
+    [
+     "Engines",
+     "Unreal Engine 5 (C++, Blueprint, Chaos, World Partition), Unity (C#, URP), Godot"
+    ],
+    [
+     "Languages",
+     "C++, C#, Blueprint, HLSL, Python, Rust"
+    ],
+    [
+     "Tools",
+     "Perforce, Git, Jira, Visual Studio, Rider, Blender, Nsight Graphics, Excel/VBA"
+    ]
+   ],
+   "sections": [
+    [
+     "Experience",
+     [
+      {
+       "title": "Design Lead — Everent (Studio Kismet, FIEA capstone)",
+       "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
+        "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
+       },
+       "bullets": [
+        {
+         "v": "DAS",
+         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+        },
+        {
+         "v": "DAS",
+         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+        },
+        {
+         "v": "DS",
+         "t": "Implemented a C++ corrupt-surface physical material (world-space gravity, angle-scaled repulsion, boost suppression) as the constraint that keeps puzzles solvable in a game where the player can ride any surface."
+        },
+        {
+         "v": "A",
+         "t": "Prototyped a compute-shader GPU flocking plugin for ambient sky creatures; when Niagara integration failed, pivoted to instanced meshes driven by CPU readback."
+        },
+        {
+         "v": "A",
+         "t": "Led the lighting and shadow architecture decision (Lumen vs. baked GI, VSM cost, HLOD) and wrote the team's graphics-settings spec on UGameUserSettings with runtime scalability groups."
+        },
+        {
+         "v": "S",
+         "t": "Hardened destructibles for World Partition and Data Layer streaming (delegate double-bind fix, overlap resolution at BeginPlay, streaming-safe destroy guards)."
+        },
+        {
+         "v": "",
+         "t": "Recovered the texture pipeline after a script bypassing the unreal Python API corrupted ~900 texture assets; rolled it back with a Perforce changelist undo."
+        },
+        {
+         "v": "",
+         "t": "Authored the GDD and one-page specs for movement, puzzle and progression; integrated DualSense adaptive-trigger haptics tuned per surface."
+        },
+        {
+         "v": "S",
+         "t": "Built a local playtest analytics pipeline (FFmpeg, faster-whisper, DeepFace, local Llama 3.1) that turns session recordings into transcripts, emotion timelines and coded feedback in the studio's Excel format."
+        }
+       ]
+      },
+      {
+       "title": "Project Lead — Studio Microdose (FIEA Ventures)",
+       "meta": "Multiplayer co-op · indie release target",
+       "date": "2026 – Present",
+       "bullets": [
+        {
+         "v": "DS",
+         "t": "Leading a 10-person team on a co-op game set in the Florida Everglades where players catch invasive animals by hand; hands-on in the build while running scope and leads (art, design, tech, community)."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Selected Projects",
+     [
+      {
+       "title": "Pocket Spaces — stencil portal system (bigger on the inside)",
+       "meta": "Unity URP · C#",
+       "date": "2026",
+       "bullets": [
+        {
+         "v": "DA",
+         "t": "Doorways reveal rooms larger than their exteriors via stencil masking; a player state machine, per-object portal membership and gravity overrides let the player and physics objects cross cleanly."
+        },
+        {
+         "v": "D",
+         "t": "One-click procedural room builder with a custom inspector (build, rebuild, eject contents, live gravity preview); portal-aware Verlet rope and grapple."
+        },
+        {
+         "v": "A",
+         "t": "Raymarched hyperbolic Mandelbox volume inside a pocket room with Möbius-transform camera movement; documented stencil depth limits (render queue collapse at depth 3+)."
+        }
+       ]
+      },
+      {
+       "title": "The Ascent — physics-based climbing",
+       "meta": "Unity · C#",
+       "date": "2026",
+       "bullets": [
+        {
+         "v": "DS",
+         "t": "Solo climbing prototype: a reference skeleton drives ConfigurableJoint targets, IK poses arms from wall normals, grip force applies at the wrist; custom ragdoll-builder editor tool."
+        }
+       ]
+      },
+      {
+       "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
+       "meta": "Rust · Vulkan RT · HLSL · OpenXR",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Personal engine: architected and directed; implementation AI-assisted.",
+        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+       },
+       "bullets": [
+        {
+         "v": "AS",
+         "t": "Hardware ray-traced Vulkan renderer where spaces with different geometry (hyperbolic, spherical, toroidal) connect through portals, with lighting and shadows traced across them."
+        },
+        {
+         "v": "DAS",
+         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+        },
+        {
+         "v": "A",
+         "t": "Lighting stack: ReSTIR direct lighting, one-bounce diffuse GI, SVGF denoising, physically based sky and volumetric atmosphere, DLSS Ray Reconstruction; analytic intersection shaders for curved primitives."
+        },
+        {
+         "v": "AS",
+         "t": "Found and fixed a shader performance regression from GPU timestamp traces by replacing a 64-step sphere tracer with an analytic quadratic solve."
+        },
+        {
+         "v": "",
+         "t": "Built benchmark tooling (pinned GPU clocks, power logging) and an OpenXR VR path profiled pass-by-pass in Nsight in the headset."
+        },
+        {
+         "v": "A",
+         "t": "Integrated into a Godot 4.6 fork as a custom renderer behind a C ABI, so Godot supplies the editor, scripting and asset pipeline."
+        }
+       ]
+      },
+      {
+       "title": "Content Design Mod — Kingdom Come: Deliverance II",
+       "meta": "KCD2 modding · PowerShell build",
+       "date": "2026",
+       "bullets": [
+        {
+         "v": "D",
+         "t": "Shipped a playable quest mod: scavenger hunt with letter-based delivery, an over-encumbrance mechanic and a twist ending at Trosky Castle, packaged with a scripted build."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Earlier Experience",
+     [
+      {
+       "title": "Quality Assurance Agent — Stormbreaker Studios, Orlando, FL",
+       "date": "Jan – Jul 2020",
+       "oneLine": "Tested 8 iOS client apps; wrote 85 defect tickets with repro steps and fix recommendations.",
+       "bullets": []
+      }
+     ]
+    ]
+   ]
+  },
+  "A": {
+   "file": "Tyler_Chisholm_Resume_Technical_Artist_Rendering",
+   "title": "Technical Artist · Real-Time Rendering",
+   "summary": "Technical artist with a rendering-engineer background. I've built a hardware ray-traced Vulkan renderer (ReSTIR, SVGF, DLSS Ray Reconstruction) and shipped UE5 features on a team (compute-shader flocking, lighting architecture, Chaos destruction, editor tools). I profile before I optimize and build tools so artists aren't blocked.",
+   "skills": [
+    [
+     "Rendering",
+     "Vulkan ray tracing, ReSTIR, SVGF denoising, ray-traced GI, PBR, volumetrics, compute shaders, raymarching/SDFs, stencil techniques"
+    ],
+    [
+     "Engines",
+     "Unreal Engine 5 (Nanite, Lumen, VSM, Substrate, Niagara, Chaos), Unity URP, Godot (engine fork)"
+    ],
+    [
+     "Languages",
+     "HLSL, GLSL, C++, C#, Rust, Python"
+    ],
+    [
+     "Tools",
+     "Nsight Graphics, Perforce, Git, Blender, Unreal Python, Jira"
+    ]
+   ],
+   "sections": [
+    [
+     "Rendering & Tech Art",
+     [
+      {
+       "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
+       "meta": "Rust · Vulkan RT · HLSL · OpenXR",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Personal engine: architected and directed; implementation AI-assisted.",
+        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+       },
+       "bullets": [
+        {
+         "v": "AS",
+         "t": "Hardware ray-traced Vulkan renderer where spaces with different geometry (hyperbolic, spherical, toroidal) connect through portals, with lighting and shadows traced across them."
+        },
+        {
+         "v": "DAS",
+         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+        },
+        {
+         "v": "A",
+         "t": "Lighting stack: ReSTIR direct lighting, one-bounce diffuse GI, SVGF denoising, physically based sky and volumetric atmosphere, DLSS Ray Reconstruction; analytic intersection shaders for curved primitives."
+        },
+        {
+         "v": "AS",
+         "t": "Found and fixed a shader performance regression from GPU timestamp traces by replacing a 64-step sphere tracer with an analytic quadratic solve."
+        },
+        {
+         "v": "",
+         "t": "Built benchmark tooling (pinned GPU clocks, power logging) and an OpenXR VR path profiled pass-by-pass in Nsight in the headset."
+        },
+        {
+         "v": "A",
+         "t": "Integrated into a Godot 4.6 fork as a custom renderer behind a C ABI, so Godot supplies the editor, scripting and asset pipeline."
+        }
+       ]
+      },
+      {
+       "title": "Design Lead — Everent (Studio Kismet, FIEA capstone)",
+       "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
+        "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
+       },
+       "bullets": [
+        {
+         "v": "DAS",
+         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+        },
+        {
+         "v": "DAS",
+         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+        },
+        {
+         "v": "DS",
+         "t": "Implemented a C++ corrupt-surface physical material (world-space gravity, angle-scaled repulsion, boost suppression) as the constraint that keeps puzzles solvable in a game where the player can ride any surface."
+        },
+        {
+         "v": "A",
+         "t": "Prototyped a compute-shader GPU flocking plugin for ambient sky creatures; when Niagara integration failed, pivoted to instanced meshes driven by CPU readback."
+        },
+        {
+         "v": "A",
+         "t": "Led the lighting and shadow architecture decision (Lumen vs. baked GI, VSM cost, HLOD) and wrote the team's graphics-settings spec on UGameUserSettings with runtime scalability groups."
+        },
+        {
+         "v": "S",
+         "t": "Hardened destructibles for World Partition and Data Layer streaming (delegate double-bind fix, overlap resolution at BeginPlay, streaming-safe destroy guards)."
+        },
+        {
+         "v": "",
+         "t": "Recovered the texture pipeline after a script bypassing the unreal Python API corrupted ~900 texture assets; rolled it back with a Perforce changelist undo."
+        },
+        {
+         "v": "",
+         "t": "Authored the GDD and one-page specs for movement, puzzle and progression; integrated DualSense adaptive-trigger haptics tuned per surface."
+        },
+        {
+         "v": "S",
+         "t": "Built a local playtest analytics pipeline (FFmpeg, faster-whisper, DeepFace, local Llama 3.1) that turns session recordings into transcripts, emotion timelines and coded feedback in the studio's Excel format."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Selected Projects",
+     [
+      {
+       "title": "Pocket Spaces — stencil portal system (bigger on the inside)",
+       "meta": "Unity URP · C#",
+       "date": "2026",
+       "bullets": [
+        {
+         "v": "DA",
+         "t": "Doorways reveal rooms larger than their exteriors via stencil masking; a player state machine, per-object portal membership and gravity overrides let the player and physics objects cross cleanly."
+        },
+        {
+         "v": "D",
+         "t": "One-click procedural room builder with a custom inspector (build, rebuild, eject contents, live gravity preview); portal-aware Verlet rope and grapple."
+        },
+        {
+         "v": "A",
+         "t": "Raymarched hyperbolic Mandelbox volume inside a pocket room with Möbius-transform camera movement; documented stencil depth limits (render queue collapse at depth 3+)."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Earlier Experience",
+     [
+      {
+       "title": "Quality Assurance Agent — Stormbreaker Studios, Orlando, FL",
+       "date": "Jan – Jul 2020",
+       "oneLine": "Tested 8 iOS client apps; wrote 85 defect tickets with repro steps and fix recommendations.",
+       "bullets": []
+      }
+     ]
+    ]
+   ]
+  },
+  "S": {
+   "file": "Tyler_Chisholm_Resume_RealTime_Simulation",
+   "title": "Real-Time 3D Developer · UE5 Simulation",
+   "summary": "UE5 C++ developer with a real-time rendering and VR background, graduating December 2026. I build interactive 3D systems end to end (physics, streaming worlds, VR input, tools) and measure performance with real instrumentation. U.S. citizen, eligible for a security clearance.",
+   "skills": [
+    [
+     "Real-Time",
+     "UE5 C++ and Blueprint, World Partition streaming, Chaos physics, OpenXR/VR, Live Link, GPU profiling, performance budgeting"
+    ],
+    [
+     "Engines",
+     "Unreal Engine 5, Unity, Godot (engine fork), custom Vulkan renderer"
+    ],
+    [
+     "Languages",
+     "C++, C#, Rust, HLSL, Python"
+    ],
+    [
+     "Tools",
+     "Perforce, Git, Jira, Visual Studio, Rider, Nsight Graphics, FFmpeg"
+    ]
+   ],
+   "sections": [
+    [
+     "Experience",
+     [
+      {
+       "title": "Design Lead — Everent (Studio Kismet, FIEA capstone)",
+       "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
+        "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
+       },
+       "bullets": [
+        {
+         "v": "DAS",
+         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+        },
+        {
+         "v": "DAS",
+         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+        },
+        {
+         "v": "DS",
+         "t": "Implemented a C++ corrupt-surface physical material (world-space gravity, angle-scaled repulsion, boost suppression) as the constraint that keeps puzzles solvable in a game where the player can ride any surface."
+        },
+        {
+         "v": "A",
+         "t": "Prototyped a compute-shader GPU flocking plugin for ambient sky creatures; when Niagara integration failed, pivoted to instanced meshes driven by CPU readback."
+        },
+        {
+         "v": "A",
+         "t": "Led the lighting and shadow architecture decision (Lumen vs. baked GI, VSM cost, HLOD) and wrote the team's graphics-settings spec on UGameUserSettings with runtime scalability groups."
+        },
+        {
+         "v": "S",
+         "t": "Hardened destructibles for World Partition and Data Layer streaming (delegate double-bind fix, overlap resolution at BeginPlay, streaming-safe destroy guards)."
+        },
+        {
+         "v": "",
+         "t": "Recovered the texture pipeline after a script bypassing the unreal Python API corrupted ~900 texture assets; rolled it back with a Perforce changelist undo."
+        },
+        {
+         "v": "",
+         "t": "Authored the GDD and one-page specs for movement, puzzle and progression; integrated DualSense adaptive-trigger haptics tuned per surface."
+        },
+        {
+         "v": "S",
+         "t": "Built a local playtest analytics pipeline (FFmpeg, faster-whisper, DeepFace, local Llama 3.1) that turns session recordings into transcripts, emotion timelines and coded feedback in the studio's Excel format."
+        }
+       ]
+      },
+      {
+       "title": "Project Lead — Studio Microdose (FIEA Ventures)",
+       "meta": "Multiplayer co-op · indie release target",
+       "date": "2026 – Present",
+       "bullets": [
+        {
+         "v": "DS",
+         "t": "Leading a 10-person team on a co-op game set in the Florida Everglades where players catch invasive animals by hand; hands-on in the build while running scope and leads (art, design, tech, community)."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Selected Projects",
+     [
+      {
+       "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
+       "meta": "Rust · Vulkan RT · HLSL · OpenXR",
+       "date": "2025 – Present",
+       "intro": {
+        "D": "Personal engine: architected and directed; implementation AI-assisted.",
+        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+       },
+       "bullets": [
+        {
+         "v": "AS",
+         "t": "Hardware ray-traced Vulkan renderer where spaces with different geometry (hyperbolic, spherical, toroidal) connect through portals, with lighting and shadows traced across them."
+        },
+        {
+         "v": "DAS",
+         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+        },
+        {
+         "v": "A",
+         "t": "Lighting stack: ReSTIR direct lighting, one-bounce diffuse GI, SVGF denoising, physically based sky and volumetric atmosphere, DLSS Ray Reconstruction; analytic intersection shaders for curved primitives."
+        },
+        {
+         "v": "AS",
+         "t": "Found and fixed a shader performance regression from GPU timestamp traces by replacing a 64-step sphere tracer with an analytic quadratic solve."
+        },
+        {
+         "v": "",
+         "t": "Built benchmark tooling (pinned GPU clocks, power logging) and an OpenXR VR path profiled pass-by-pass in Nsight in the headset."
+        },
+        {
+         "v": "A",
+         "t": "Integrated into a Godot 4.6 fork as a custom renderer behind a C ABI, so Godot supplies the editor, scripting and asset pipeline."
+        }
+       ]
+      },
+      {
+       "title": "Asymmetric VR rally game",
+       "meta": "Unity · Quest 3 PCVR · Logitech wheel",
+       "date": "2026",
+       "bullets": [
+        {
+         "v": "S",
+         "t": "Local co-op driving game pairing a VR driver with a screen-side co-driver; hardware-agnostic input layer (Strategy pattern) for wheel, pedals and controllers, plus seated calibration."
+        }
+       ]
+      }
+     ]
+    ],
+    [
+     "Earlier Experience",
+     [
+      {
+       "title": "Quality Assurance Agent — Stormbreaker Studios, Orlando, FL",
+       "date": "Jan – Jul 2020",
+       "oneLine": "Tested 8 iOS client apps; wrote 85 defect tickets with repro steps and fix recommendations.",
+       "bullets": []
+      }
+     ]
+    ]
+   ]
+  }
+ }
+}
