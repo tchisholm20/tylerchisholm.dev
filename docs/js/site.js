@@ -54,11 +54,17 @@
     if (!/(^|\.)youtube(-nocookie)?\.com$/.test(host)) return;
     try { data = typeof e.data === "string" ? JSON.parse(e.data) : e.data; } catch { return; }
     const state = data.event === "onStateChange" ? data.info : data.info && data.info.playerState;
-    if (state !== 0) return;
     document.querySelectorAll("iframe.preview").forEach((f) => {
       if (f.contentWindow !== e.source) return;
-      command(f, "seekTo", [Number(f.dataset.start) || 0, true]);
-      command(f, "playVideo");
+      clearInterval(f._hello);
+      const frame = f.closest(".reel-frame");
+      if (state === 1 && !frame._reveal) {
+        // Reveal only once frames are actually moving, and after YouTube's title overlay has faded.
+        frame._reveal = setTimeout(() => frame.classList.add("live"), 2500);
+      } else if (state === 0) {
+        command(f, "seekTo", [Number(f.dataset.start) || 0, true]);
+        command(f, "playVideo");
+      }
     });
   });
   function playerSrc(id) {
@@ -77,6 +83,7 @@
     frame.querySelectorAll("iframe, video").forEach((el) => el.remove());
     frame.classList.remove("live", "full");
     clearTimeout(frame._reveal);
+    frame._reveal = null;
   }
 
   function startPreview(frame) {
@@ -98,8 +105,12 @@
       el.allow = "autoplay; encrypted-media";
       // Keep the poster up while YouTube shows its title overlay.
       el.addEventListener("load", () => {
-        el.contentWindow.postMessage(JSON.stringify({ event: "listening", id: id }), "*");
-        frame._reveal = setTimeout(() => frame.classList.add("live"), 3200);
+        // The player only reports state after it hears "listening", and it may not be ready on load.
+        let tries = 0;
+        el._hello = setInterval(() => {
+          if (++tries > 20 || !el.isConnected) return clearInterval(el._hello);
+          el.contentWindow.postMessage(JSON.stringify({ event: "listening", id: id }), "*");
+        }, 400);
       }, { once: true });
     }
     el.className = "preview";
