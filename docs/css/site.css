@@ -126,6 +126,7 @@ p { margin: 0; }
   position: absolute; inset: 0; width: 100%; height: 100%;
   object-fit: cover; border: 0;
   transform: scale(var(--crop, 1));
+  transform-origin: var(--focus, 50% 50%);
 }
 .reel-poster { z-index: 2; transition: opacity .6s ease; }
 .reel-frame.live .reel-poster { opacity: 0; pointer-events: none; }
