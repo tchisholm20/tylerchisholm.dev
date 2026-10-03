@@ -23,8 +23,13 @@ Everything on the page lives in `docs/index.html`.
 
 - **Role switch.** Any element with `data-for="design rendering simulation"` shows only for the listed roles. Projects reorder through `data-order-design`, `data-order-rendering` and `data-order-simulation`.
 - **Role links.** `tylerchisholm.dev/?for=rendering` or `?for=simulation` opens the page with that role selected. Use these links in applications.
-- **Videos.** Each video is a `.reel-frame` with `data-yt="<YouTube id>"`. Clip buttons switch the video. `data-crop="1.12"` zooms in to hide pillarbox bars baked into an upload.
-- **Local loops.** Add `data-loop="media/<file>.mp4"` to a `.reel-frame` or clip button to play a local muted loop instead of the YouTube preview. See `docs/media/README.md`.
+- **Videos.** Each video is a `.reel-frame` with `data-yt="<YouTube id>"` and an optional `data-start` in seconds. `data-crop` zooms in and `data-focus` sets the zoom origin, which is how editor captures are framed on the game viewport.
+- **What I did.** Each project's `.did` list holds its contributions. A `.did-head` button with `data-yt` (plus optional `data-start`, `data-crop`, `data-focus` and `data-caption`) switches the project video when opened; one without `data-yt` only opens its text.
+- **Local loops.** Add `data-loop="media/<file>.mp4"` to a `.reel-frame` or `.did-head` button to play a local muted loop instead of the YouTube preview. See `docs/media/README.md`.
+
+## Deploying changes
+
+After editing `css/site.css` or `js/site.js`, bump the `?v=` number on their links in `index.html`. Browsers cache those files, and without the bump a returning visitor can get new HTML with old styles.
 
 ## Résumés
 

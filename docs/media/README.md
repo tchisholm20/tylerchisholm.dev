@@ -22,7 +22,7 @@ Put the file in this folder and add `data-loop` next to the matching `data-yt` i
 <div class="reel-frame" data-yt="FoDRT-KfREg" data-loop="media/everent-destruction.mp4">
 ```
 
-For a clip button, put `data-loop` on the button instead. "Play with sound" still opens the full YouTube video.
+For a "What I did" item, put `data-loop` on its `.did-head` button instead. "Play with sound" still opens the full YouTube video.
 
 ## Moments worth cutting
 
