@@ -135,6 +135,7 @@ p { margin: 0; }
 .reel-frame.live .reel-poster { opacity: 0; pointer-events: none; }
 .reel-frame iframe.preview, .reel-frame video { pointer-events: none; z-index: 1; }
 .reel-frame.full iframe { transform: none; z-index: 3; }
+.reel-frame video { transform: none; }
 .reel-frame.full .reel-poster, .reel-frame.full .reel-sound { display: none; }
 .reel-sound {
   position: absolute; z-index: 4; left: 14px; bottom: 14px;

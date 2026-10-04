@@ -18,7 +18,7 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="stylesheet" href="css/site.css?v=4">
+  <link rel="stylesheet" href="css/site.css?v=5">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body data-role="design">
@@ -38,11 +38,11 @@
       <h1 id="headline">I design game systems, then&nbsp;build&nbsp;them.</h1>
 
       <figure class="reel reel-hero">
-        <div class="reel-frame" data-yt="xKO3J9afc3U">
-          <img class="reel-poster" alt="Everent trailer: riding a hoverboard through the sky islands" src="https://i.ytimg.com/vi/xKO3J9afc3U/maxresdefault.jpg" width="1280" height="720" fetchpriority="high">
-          <button class="reel-sound" type="button">Play with sound</button>
+        <div class="reel-frame" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4">
+          <img class="reel-poster" alt="Everent: riding a hoverboard off a sky island at sunset" src="https://i.ytimg.com/vi/xKO3J9afc3U/maxresdefault.jpg" width="1280" height="720" fetchpriority="high">
+          <button class="reel-sound" type="button">Play trailer with sound</button>
         </div>
-        <figcaption>Everent, our FIEA capstone. Team trailer, 0:31.</figcaption>
+        <figcaption>Everent, our FIEA capstone, in game. The team trailer runs 0:31.</figcaption>
       </figure>
 
       <div class="hero-foot">
@@ -75,7 +75,7 @@
         </header>
 
         <figure class="reel">
-          <div class="reel-frame" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%">
+          <div class="reel-frame" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-loop="media/everent-destruction.mp4">
             <img class="reel-poster" alt="Everent: speed-gated destruction test in the editor" src="https://i.ytimg.com/vi/FoDRT-KfREg/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
@@ -86,7 +86,7 @@
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-caption="Speed-gated destruction, recorded in the editor. Full video 4:13.">Speed-gated destruction<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-loop="media/everent-destruction.mp4" data-caption="Speed-gated destruction, recorded in the editor. Full video 4:13.">Speed-gated destruction<span class="has-video">Video</span></button>
               <div class="did-body"><p>Walls only break if you hit them fast enough. I built it in C++ on Chaos Geometry Collections: two trigger volumes measure your speed on the way in, and the impact spawns a physics field with strain plus directional and radial velocity. We use it to hide secrets and to reward players who keep their speed up.</p></div>
             </li>
             <li data-for="design rendering simulation">
@@ -95,14 +95,14 @@
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head" data-yt="oAy6t1RdepA" data-start="20" data-crop="1.28" data-focus="0% 100%" data-caption="The respawn system, recorded in the editor. Full video 1:00.">Respawn system<span class="has-video">Video</span></button>
-              <div class="did-body"><p>I built Everent's respawn system. The clip shows it running in the editor.</p></div>
+              <div class="did-body"><p>Fall off an island and you come back to the last place it was safe to stand. Every two seconds a C++ component checks the board: grounded, on a gentle slope, under a speed cap, clear overhead, and on static ground under all five points of its footprint. Designer-placed checkpoints override the sampling and save to disk. On respawn it resets boost, grind, and powerslide state and zeroes the physics velocity before teleporting, so Chaos doesn't fling you on arrival.</p></div>
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head">Corrupt surfaces</button>
               <div class="did-body"><p>You can ride on any surface in Everent, so puzzles needed a hard limit. I wrote a C++ physical material that pushes the board away with world-space gravity, scales the push by approach angle, and turns off boost.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="xKO3J9afc3U" data-caption="The game my team made. Team trailer, 0:31.">Leading the design team<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4" data-caption="The game my team made, in game. The team trailer runs 0:31.">Leading the design team<span class="has-video">Video</span></button>
               <div class="did-body"><p>I led 7 designers from concept through production. I wrote the GDD and the one-page specs for movement, puzzles, and progression, ran sprint planning in Jira, and tuned the DualSense adaptive triggers for each surface type.</p></div>
             </li>
             <li data-for="rendering">
@@ -134,7 +134,7 @@
         </header>
 
         <figure class="reel">
-          <div class="reel-frame" data-yt="3rHi_rX2ivI" data-start="70">
+          <div class="reel-frame" data-yt="3rHi_rX2ivI" data-start="70" data-loop="media/spatial-sponza.mp4">
             <img class="reel-poster" alt="Spatial Engine: path-traced Sponza atrium" src="https://i.ytimg.com/vi/3rHi_rX2ivI/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
@@ -146,7 +146,7 @@
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="3rHi_rX2ivI" data-start="70" data-caption="Path tracing in Sponza. Full video 2:31.">Path-traced lighting<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="3rHi_rX2ivI" data-start="70" data-loop="media/spatial-sponza.mp4" data-caption="Path tracing in Sponza. Full video 2:31.">Path-traced lighting<span class="has-video">Video</span></button>
               <div class="did-body"><p>ReSTIR direct lighting, one-bounce diffuse GI, SVGF denoising, a physically based sky and volumetric atmosphere, and DLSS Ray Reconstruction. Curved primitives use analytic intersection shaders.</p></div>
             </li>
             <li data-for="design rendering simulation">
@@ -158,7 +158,7 @@
               <div class="did-body"><p>Streaming in distant terrain pushed VR frame time up. The run data pointed at the radiance cache, so I had the distance cascade extended and checked it pass by pass in Nsight. Cache resolve dropped from 2.8–5.8&nbsp;ms to about 0.35&nbsp;ms (median).</p></div>
             </li>
             <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-caption="Grabbing and handling objects in VR. Full video 3:59.">A physical body in VR<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR. Full video 3:59.">A physical body in VR<span class="has-video">Video</span></button>
               <div class="did-body"><p>In VR you have a physics-driven body that can grab, climb, and pick things up. I also built benchmark tooling that pins GPU clocks and logs power draw.</p></div>
             </li>
             <li data-for="rendering simulation">
@@ -182,7 +182,7 @@
         </header>
 
         <figure class="reel">
-          <div class="reel-frame" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%">
+          <div class="reel-frame" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-doorway.mp4">
             <img class="reel-poster" alt="Pocket Spaces: a row of doors in a white test room" src="https://i.ytimg.com/vi/8AvQAyXFCWM/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
@@ -193,7 +193,7 @@
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%" data-caption="Walking through the portal rooms. Full video 1:56.">Doorways<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-doorway.mp4" data-caption="Walking through the portal rooms. Full video 1:56.">Doorways<span class="has-video">Video</span></button>
               <div class="did-body"><p>Each doorway uses stencil masking to show a room larger than the outside of the building. A player state machine, per-object portal membership, and gravity overrides let the player and physics objects cross cleanly.</p></div>
             </li>
             <li data-for="design simulation">
@@ -201,7 +201,7 @@
               <div class="did-body"><p>Physics objects move between rooms and switch to the new room's gravity as they cross.</p></div>
             </li>
             <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="60" data-crop="1.15" data-focus="50% 55%" data-caption="The rope and grapple through a doorway. Full video 1:56.">Rope through doorways<span class="has-video">Video</span></button>
+              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="60" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-rope.mp4" data-caption="The rope and grapple through a doorway. Full video 1:56.">Rope through doorways<span class="has-video">Video</span></button>
               <div class="did-body"><p>A Verlet rope and grapple that keeps working through doorways, with a renderer that draws the rope across the portal.</p></div>
             </li>
             <li data-for="design simulation">
@@ -252,6 +252,6 @@
     <p>© 2026 Tyler Chisholm</p>
   </footer>
 
-  <script src="js/site.js?v=4" defer></script>
+  <script src="js/site.js?v=5" defer></script>
 </body>
 </html>
