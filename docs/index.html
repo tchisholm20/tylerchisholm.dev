@@ -87,11 +87,11 @@
           <ul class="did">
             <li data-for="design rendering simulation">
               <button type="button" class="did-head" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-loop="media/everent-destruction.mp4" data-caption="Speed-gated destruction, recorded in the editor. Full video 4:13.">Speed-gated destruction<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Walls only break if you hit them fast enough. I built it in C++ on Chaos Geometry Collections: two trigger volumes measure your speed on the way in, and the impact spawns a physics field with strain plus directional and radial velocity. We use it to hide secrets and to reward players who keep their speed up.</p></div>
+              <div class="did-body"><p>Walls only break if you hit them hard enough. I built it in C++ on Chaos Geometry Collections. Each frame a sweep looks ahead of the board, and only your speed into the wall counts, so glancing hits don't fire. Above the threshold the wall's blockers switch off a frame early so you keep your momentum, and a strain field with directional and radial velocity shatters it at the impact point. Walls can stay broken, rebuild after a delay, or clear their debris. We use it to hide secrets and to reward players who keep their speed up.</p></div>
             </li>
             <li data-for="design rendering simulation">
               <button type="button" class="did-head" data-yt="tHOblBrVMFQ" data-start="25" data-caption="The destructibles panel in use. Full video 0:41.">Destructibles editor tool<span class="has-video">Video</span></button>
-              <div class="did-body"><p>A panel under the Window menu that lists every destructible in the level, shows its tuning, and fires a test projectile with an in-place reset. Designers can tune breakage without entering Play mode.</p></div>
+              <div class="did-body"><p>The Destructible Wall Browser, under the Window menu, lists every destructible in the level, shows its tuning, and fires a test projectile at a chosen point and speed with a camera looking down its flight path. Designers can test hits above and below the threshold and reset the wall without entering Play mode.</p></div>
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head" data-yt="oAy6t1RdepA" data-start="20" data-crop="1.28" data-focus="0% 100%" data-caption="The respawn system, recorded in the editor. Full video 1:00.">Respawn system<span class="has-video">Video</span></button>
@@ -142,7 +142,7 @@
         </figure>
 
         <div class="built">
-          <p class="how">How I build it: I own the architecture and direction, and AI writes much of the code. I set the goals and the tests, read the GPU timings, and make the final call in the headset. It's about 145k lines of Rust across 13 crates, with 600+ commits.</p>
+          <p class="how">How I build it: I own the architecture and direction, and AI writes much of the code. I set the goals and the tests, read the GPU timings, and make the final call in the headset. It's about 115k lines of Rust and 40k of HLSL across 13 crates, with 680+ commits.</p>
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
