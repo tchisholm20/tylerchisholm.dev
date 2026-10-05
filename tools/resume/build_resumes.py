@@ -97,7 +97,10 @@ def main():
     OUT.mkdir(parents=True, exist_ok=True)
     failed = False
     with sync_playwright() as p:
-        browser = p.chromium.launch()
+        try:
+            browser = p.chromium.launch()
+        except Exception:
+            browser = p.chromium.launch(channel="msedge")
         page = browser.new_page()
         for key, v in data["variants"].items():
             src = HERE / f".build-{key}.html"

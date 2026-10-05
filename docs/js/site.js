@@ -1,7 +1,7 @@
 (() => {
   const RESUMES = {
     design: "resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf",
-    rendering: "resumes/Tyler_Chisholm_Resume_Technical_Artist_Rendering.pdf",
+    rendering: "resumes/Tyler_Chisholm_Resume_Rendering.pdf",
     simulation: "resumes/Tyler_Chisholm_Resume_RealTime_Simulation.pdf",
   };
   const ytBase = "https://www.youtube-nocookie.com/embed/";

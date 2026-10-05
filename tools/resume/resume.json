@@ -55,18 +55,18 @@
        "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
        "date": "2025 – Present",
        "intro": {
-        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers on a 20+ person team from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
         "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
         "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
        },
        "bullets": [
         {
          "v": "DAS",
-         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+         "t": "Designed and built speed-gated destruction in C++ on Chaos Geometry Collections: a predictive sweep measures impact speed into the wall, drops blockers a frame early to keep momentum, and fires strain, directional and radial velocity fields. It doubles as secret gating and skill expression."
         },
         {
          "v": "DAS",
-         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+         "t": "Built the Destructible Wall Browser editor tool: lists every destructible in the level, exposes its tuning and fires a test projectile at a set point and speed, so designers tune without entering Play mode."
         },
         {
          "v": "DS",
@@ -147,11 +147,11 @@
       {
        "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
        "meta": "Rust · Vulkan RT · HLSL · OpenXR",
-       "date": "2025 – Present",
+       "date": "2026 – Present",
        "intro": {
         "D": "Personal engine: architected and directed; implementation AI-assisted.",
-        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
-        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+        "A": "Personal engine, ~115k lines of Rust and 40k of HLSL across 13 crates, 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~155k lines and 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
        },
        "bullets": [
         {
@@ -160,7 +160,7 @@
         },
         {
          "v": "DAS",
-         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+         "t": "Runs the full path tracer in VR at 90 Hz on a Quest over Link on modest RTX hardware, across ~900 km of streamed terrain with volumetric clouds."
         },
         {
          "v": "A",
@@ -207,9 +207,9 @@
    ]
   },
   "A": {
-   "file": "Tyler_Chisholm_Resume_Technical_Artist_Rendering",
-   "title": "Technical Artist · Real-Time Rendering",
-   "summary": "Technical artist with a rendering-engineer background. I've built a hardware ray-traced Vulkan renderer (ReSTIR, SVGF, DLSS Ray Reconstruction) and shipped UE5 features on a team (compute-shader flocking, lighting architecture, Chaos destruction, editor tools). I profile before I optimize and build tools so artists aren't blocked.",
+   "file": "Tyler_Chisholm_Resume_Rendering",
+   "title": "Technical Designer · Real-Time Rendering",
+   "summary": "Technical designer with a rendering focus. I've built a hardware ray-traced Vulkan renderer (ReSTIR, SVGF, DLSS Ray Reconstruction) that holds 90 Hz in VR, and shipped UE5 features on a team (compute-shader flocking, lighting architecture, Chaos destruction, editor tools). I profile before I optimize.",
    "skills": [
     [
      "Rendering",
@@ -230,16 +230,16 @@
    ],
    "sections": [
     [
-     "Rendering & Tech Art",
+     "Rendering",
      [
       {
        "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
        "meta": "Rust · Vulkan RT · HLSL · OpenXR",
-       "date": "2025 – Present",
+       "date": "2026 – Present",
        "intro": {
         "D": "Personal engine: architected and directed; implementation AI-assisted.",
-        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
-        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+        "A": "Personal engine, ~115k lines of Rust and 40k of HLSL across 13 crates, 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~155k lines and 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
        },
        "bullets": [
         {
@@ -248,7 +248,7 @@
         },
         {
          "v": "DAS",
-         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+         "t": "Runs the full path tracer in VR at 90 Hz on a Quest over Link on modest RTX hardware, across ~900 km of streamed terrain with volumetric clouds."
         },
         {
          "v": "A",
@@ -273,18 +273,18 @@
        "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
        "date": "2025 – Present",
        "intro": {
-        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers on a 20+ person team from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
         "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
         "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
        },
        "bullets": [
         {
          "v": "DAS",
-         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+         "t": "Designed and built speed-gated destruction in C++ on Chaos Geometry Collections: a predictive sweep measures impact speed into the wall, drops blockers a frame early to keep momentum, and fires strain, directional and radial velocity fields. It doubles as secret gating and skill expression."
         },
         {
          "v": "DAS",
-         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+         "t": "Built the Destructible Wall Browser editor tool: lists every destructible in the level, exposes its tuning and fires a test projectile at a set point and speed, so designers tune without entering Play mode."
         },
         {
          "v": "DS",
@@ -386,18 +386,18 @@
        "meta": "UE5.7 · C++ · Blueprint · Chaos · Perforce",
        "date": "2025 – Present",
        "intro": {
-        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
+        "D": "Momentum-based hoverboard game across an open world of floating sky islands, coming to Steam. Led 7 designers on a 20+ person team from concept through production; wrote the GDD and one-page specs; ran sprint planning and Jira for the design team.",
         "A": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, Substrate, World Partition), coming to Steam.",
         "S": "Momentum-based hoverboard game across an open world of floating sky islands in UE5.7 (Nanite, Virtual Shadow Maps, World Partition), coming to Steam."
        },
        "bullets": [
         {
          "v": "DAS",
-         "t": "Designed and built velocity-gated destruction system in C++ on Chaos Geometry Collections: two-volume speed detection plus an impact-spawned physics field (strain, directional and radial velocity). It doubles as secret gating and skill expression."
+         "t": "Designed and built speed-gated destruction in C++ on Chaos Geometry Collections: a predictive sweep measures impact speed into the wall, drops blockers a frame early to keep momentum, and fires strain, directional and radial velocity fields. It doubles as secret gating and skill expression."
         },
         {
          "v": "DAS",
-         "t": "Built an editor tool (Window > Destructibles) that lists every destructible in the level, exposes its tuning and fires a test projectile with in-place reset, so designers tune without entering Play mode."
+         "t": "Built the Destructible Wall Browser editor tool: lists every destructible in the level, exposes its tuning and fires a test projectile at a set point and speed, so designers tune without entering Play mode."
         },
         {
          "v": "DS",
@@ -448,11 +448,11 @@
       {
        "title": "Spatial Engine — ray-traced engine for non-Euclidean spaces",
        "meta": "Rust · Vulkan RT · HLSL · OpenXR",
-       "date": "2025 – Present",
+       "date": "2026 – Present",
        "intro": {
         "D": "Personal engine: architected and directed; implementation AI-assisted.",
-        "A": "Personal engine, ~145k lines across 13 crates and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
-        "S": "Personal engine, ~145k lines and 600+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
+        "A": "Personal engine, ~115k lines of Rust and 40k of HLSL across 13 crates, 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted.",
+        "S": "Personal engine, ~155k lines and 680+ commits. I own the architecture, direction and verification; implementation is AI-assisted."
        },
        "bullets": [
         {
@@ -461,7 +461,7 @@
         },
         {
          "v": "DAS",
-         "t": "Led a measured VR graphics experiment after streamed terrain exposed a radiance-cache bottleneck; extending the distance cascade cut the cache-resolve median from 2.8–5.8 ms to about 0.35 ms."
+         "t": "Runs the full path tracer in VR at 90 Hz on a Quest over Link on modest RTX hardware, across ~900 km of streamed terrain with volumetric clouds."
         },
         {
          "v": "A",

@@ -18,7 +18,7 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="stylesheet" href="css/site.css?v=5">
+  <link rel="stylesheet" href="css/site.css?v=6">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body data-role="design">
@@ -48,7 +48,7 @@
       <div class="hero-foot">
         <div class="summaries">
           <p data-for="design">I'm a technical designer. I design mechanics, build them in C++, Blueprint, or C#, and make the editor tools my team uses to tune them. Right now I'm Design Lead on Everent, a UE5 game coming to Steam.</p>
-          <p data-for="rendering">I'm a technical artist who also builds renderers. I wrote a hardware ray-traced Vulkan renderer with ReSTIR, SVGF, and DLSS Ray Reconstruction, and I ship UE5 features on a team. I measure before I optimize.</p>
+          <p data-for="rendering">I'm a technical designer who builds renderers. I built a hardware ray-traced Vulkan renderer with ReSTIR, SVGF, and DLSS Ray Reconstruction that clears 90&nbsp;Hz in VR, and I ship UE5 features on a team. I measure before I optimize.</p>
           <p data-for="simulation">I build real-time 3D systems in UE5 C++: physics, streaming worlds, VR input, and the tools around them, and I back performance work with profiler data. I'm a U.S. citizen and eligible for a security clearance.</p>
           <p class="avail">I finish my M.S. at FIEA in December 2026 and can start in January 2027. I'm in Orlando and open to relocating.</p>
         </div>
@@ -57,7 +57,7 @@
           <p id="role-label">What role are you hiring for?</p>
           <div class="role-options">
             <label><input type="radio" name="role" value="design" checked><span>Technical design</span></label>
-            <label><input type="radio" name="role" value="rendering"><span>Tech art and rendering</span></label>
+            <label><input type="radio" name="role" value="rendering"><span>Rendering and graphics</span></label>
             <label><input type="radio" name="role" value="simulation"><span>Real-time and simulation</span></label>
           </div>
           <a class="resume-button" href="resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf" data-resume>Download résumé <span class="pdf">PDF</span></a>
@@ -103,7 +103,7 @@
             </li>
             <li data-for="design rendering simulation">
               <button type="button" class="did-head" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4" data-caption="The game my team made, in game. The team trailer runs 0:31.">Leading the design team<span class="has-video">Video</span></button>
-              <div class="did-body"><p>I led 7 designers from concept through production. I wrote the GDD and the one-page specs for movement, puzzles, and progression, ran sprint planning in Jira, and tuned the DualSense adaptive triggers for each surface type.</p></div>
+              <div class="did-body"><p>I led 7 designers, on a team of 20-plus, from concept through production. I wrote the GDD and the one-page specs for movement, puzzles, and progression, ran sprint planning in Jira, and tuned the DualSense adaptive triggers for each surface type.</p></div>
             </li>
             <li data-for="rendering">
               <button type="button" class="did-head">Sky creatures</button>
@@ -129,7 +129,7 @@
       <article class="project" id="spatial-engine" data-order-design="3" data-order-rendering="1" data-order-simulation="2">
         <header class="project-head">
           <h2>Spatial Engine</h2>
-          <p class="role-line">Personal project, 2025 to now</p>
+          <p class="role-line">Personal project, 2026 to now</p>
           <p class="pitch">A hardware ray-traced Vulkan renderer for connected non-Euclidean spaces. Hyperbolic, spherical, and toroidal rooms join through portals, with light and shadow traced across them. It runs inside a Godot 4.6 fork and in VR.</p>
         </header>
 
@@ -154,8 +154,8 @@
               <div class="did-body"><p>Portals join rooms with different curvature. Rays continue through a portal into the next space, so lighting and shadows stay consistent across the seam.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="80" data-caption="Running in a VR headset. Full video 3:59.">Fixing VR frame time<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Streaming in distant terrain pushed VR frame time up. The run data pointed at the radiance cache, so I had the distance cascade extended and checked it pass by pass in Nsight. Cache resolve dropped from 2.8–5.8&nbsp;ms to about 0.35&nbsp;ms (median).</p></div>
+              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="80" data-caption="Running in a VR headset. Full video 3:59.">Path tracing in VR<span class="has-video">Video</span></button>
+              <div class="did-body"><p>The full path tracer runs in VR and clears 90&nbsp;Hz on a Quest over Link cable on modest RTX hardware, across about 900&nbsp;km of streamed terrain with volumetric clouds. I profile it pass by pass in Nsight with the headset on.</p></div>
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR. Full video 3:59.">A physical body in VR<span class="has-video">Video</span></button>
@@ -240,7 +240,7 @@
         <a class="email" href="mailto:tchisholm2020@gmail.com">tchisholm2020@gmail.com</a>
         <ul class="links">
           <li><a href="resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf">Technical design résumé</a></li>
-          <li><a href="resumes/Tyler_Chisholm_Resume_Technical_Artist_Rendering.pdf">Tech art and rendering résumé</a></li>
+          <li><a href="resumes/Tyler_Chisholm_Resume_Rendering.pdf">Rendering résumé</a></li>
           <li><a href="resumes/Tyler_Chisholm_Resume_RealTime_Simulation.pdf">Real-time and simulation résumé</a></li>
           <li><a href="https://www.youtube.com/@tylerchisholm2682">All project videos on YouTube</a></li>
         </ul>
@@ -252,6 +252,6 @@
     <p>© 2026 Tyler Chisholm</p>
   </footer>
 
-  <script src="js/site.js?v=5" defer></script>
+  <script src="js/site.js?v=6" defer></script>
 </body>
 </html>

@@ -33,7 +33,7 @@ After editing `css/site.css` or `js/site.js`, bump the `?v=` number on their lin
 
 ## Résumés
 
-Content is in `tools/resume/resume.json`. Each bullet's `v` field lists the variants it appears in: `D` technical design, `A` tech art and rendering, `S` real-time and simulation.
+Content is in `tools/resume/resume.json`. Each bullet's `v` field lists the variants it appears in: `D` technical design, `A` rendering and graphics, `S` real-time and simulation.
 
 ```
 pip install playwright
