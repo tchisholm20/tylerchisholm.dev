@@ -47,7 +47,7 @@
 
       <div class="hero-foot">
         <div class="summaries">
-          <p data-for="design">I'm a technical designer. I design mechanics, build them in C++, Blueprint, or C#, and make the editor tools my team uses to tune them. Right now I'm Design Lead on Everent, a UE5 game coming to Steam.</p>
+          <p data-for="design">I'm a technical designer. I design mechanics, build them in C++, Blueprint, or C#, and make the editor tools my team uses to tune them. I'm Design Lead on Everent, a UE5 game coming to Steam, and Project Lead on Studio Microdose.</p>
           <p data-for="rendering">I'm a technical designer who builds renderers. I built a hardware ray-traced Vulkan renderer with ReSTIR, SVGF, and DLSS Ray Reconstruction that clears 90&nbsp;Hz in VR, and I ship UE5 features on a team. I measure before I optimize.</p>
           <p data-for="simulation">I build real-time 3D systems in UE5 C++: physics, streaming worlds, VR input, and the tools around them, and I back performance work with profiler data. I'm a U.S. citizen and eligible for a security clearance.</p>
           <p class="avail">I finish my M.S. at FIEA in December 2026 and can start in January 2027. I'm in Orlando and open to relocating.</p>
@@ -67,7 +67,7 @@
 
     <section id="work" class="work wrap" aria-label="Selected work">
 
-      <article class="project" id="everent" data-order-design="1" data-order-rendering="2" data-order-simulation="1">
+      <article class="project" id="everent" data-order-design="1" data-order-rendering="3" data-order-simulation="1">
         <header class="project-head">
           <h2>Everent</h2>
           <p class="role-line">Design Lead, Studio Kismet (FIEA capstone), 2025 to now</p>
@@ -130,7 +130,7 @@
         <header class="project-head">
           <h2>Spatial Engine</h2>
           <p class="role-line">Personal project, 2026 to now</p>
-          <p class="pitch">A hardware ray-traced Vulkan renderer for connected non-Euclidean spaces. Hyperbolic, spherical, and toroidal rooms join through portals, with light and shadow traced across them. It runs inside a Godot 4.6 fork and in VR.</p>
+          <p class="pitch">A path-traced VR engine: a hardware ray-traced Vulkan renderer in Rust, running inside a Godot 4.6 fork. I'm using it to build a VR climbing game on the real Grand Canyon, with physics-driven bodies for you and the NPCs.</p>
         </header>
 
         <figure class="reel">
@@ -158,8 +158,12 @@
               <div class="did-body"><p>The full path tracer runs in VR and clears 90&nbsp;Hz on a Quest over Link cable on modest RTX hardware, across about 900&nbsp;km of streamed terrain with volumetric clouds. I profile it pass by pass in Nsight with the headset on.</p></div>
             </li>
             <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR. Full video 3:59.">A physical body in VR<span class="has-video">Video</span></button>
-              <div class="did-body"><p>In VR you have a physics-driven body that can grab, climb, and pick things up. I also built benchmark tooling that pins GPU clocks and logs power draw.</p></div>
+              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR. Full video 3:59.">Physical bodies<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Your body in VR is a Jolt active ragdoll that follows your tracked movement, with a contact-based support model for walking and climbing. NPCs use powered ragdolls with a wound list: a knife can stab, stick, or carve, and wounds and fractures drive bleeding and knockouts.</p></div>
+            </li>
+            <li data-for="design rendering simulation">
+              <button type="button" class="did-head">The Grand Canyon slice</button>
+              <div class="did-body"><p>The current game is a climb on the real Grand Canyon. The terrain comes from USGS 3DEP lidar, the rock is split into 10 geologic formations, and I tune the look against real photos matched to the same camera position. Every new feature gets a stereo frame budget at 90&nbsp;Hz before it's built.</p></div>
             </li>
             <li data-for="rendering simulation">
               <button type="button" class="did-head">A shader regression</button>
@@ -174,7 +178,7 @@
         </div>
       </article>
 
-      <article class="project" id="pocket-spaces" data-order-design="2" data-order-rendering="3" data-order-simulation="3">
+      <article class="project" id="pocket-spaces" data-order-design="2" data-order-rendering="4" data-order-simulation="3">
         <header class="project-head">
           <h2>Pocket Spaces</h2>
           <p class="role-line">Solo Unity prototype, 2026</p>
@@ -214,6 +218,42 @@
             </li>
           </ul>
           <p class="tools">Unity URP, C#, stencil rendering, editor tooling</p>
+        </div>
+      </article>
+
+      <article class="project" id="sfa-vita" data-order-design="4" data-order-rendering="2" data-order-simulation="4">
+        <header class="project-head">
+          <h2>Star Fox Adventures on PS Vita</h2>
+          <p class="role-line">Personal project, 2026. Released, <a href="https://github.com/tchisholm20/starfox-adventures-vita">source on GitHub</a></p>
+          <p class="pitch">Star Fox Adventures running natively on a PS Vita. The decompiled GameCube game is compiled for the Vita's ARM CPU, not emulated, and I wrote the graphics backend that makes it draw.</p>
+        </header>
+
+        <figure class="reel">
+          <div class="reel-frame" data-yt="RpsG4do0GE8">
+            <img class="reel-poster" alt="Star Fox Adventures running on a PS Vita" src="https://i.ytimg.com/vi/RpsG4do0GE8/hqdefault.jpg" width="480" height="360" loading="lazy">
+            <button class="reel-sound" type="button">Play with sound</button>
+          </div>
+          <figcaption class="reel-caption" aria-live="polite">Running on a real PS Vita.</figcaption>
+        </figure>
+
+        <div class="built">
+          <p class="how">Built on SFA-Decomp by Zachary Canann, Jack Price-Burns and contributors, and the PC port branch by Cassieandstuff. No game data is included; players supply their own disc. I own the architecture and the decisions, and AI writes much of the code.</p>
+          <h3 class="did-title">What I did</h3>
+          <ul class="did">
+            <li data-for="design rendering simulation">
+              <button type="button" class="did-head" data-yt="RpsG4do0GE8" data-caption="Running on a real PS Vita.">GX to GXM<span class="has-video">Video</span></button>
+              <div class="did-body"><p>The game calls the GameCube's GX graphics API. I wrote the backend that translates those calls to GXM, the Vita's native graphics API, without editing the upstream port.</p></div>
+            </li>
+            <li data-for="design rendering simulation">
+              <button type="button" class="did-head">Shaders and geometry</button>
+              <div class="did-body"><p>TEV combiner setups compile into shaders that are cached on the memory card. Display lists become vertex buffers on first draw and are reused, and animated characters are skinned on the GPU.</p></div>
+            </li>
+            <li data-for="design rendering simulation">
+              <button type="button" class="did-head">Threads and profiling</button>
+              <div class="did-body"><p>The game loop and the renderer run on separate CPU cores. I built on-device profiling and A/B harnesses and tuned from measured frame data. Most areas hold 30&nbsp;fps at 640&times;368.</p></div>
+            </li>
+          </ul>
+          <p class="tools">C, GXM, VitaSDK, vitaGL, ARM</p>
         </div>
       </article>
     </section>
