@@ -227,9 +227,17 @@ p { margin: 0; }
   .also dl { grid-template-columns: 1fr; }
 }
 @media (max-width: 520px) {
-  .masthead nav a[href="#about"] { display: none; }
+  .masthead nav { font-size: 0.95rem; }
   .reel-sound { left: 10px; bottom: 10px; }
 }
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+.hero h1 + .hero-sub { margin: calc(-1 * clamp(10px, 2vw, 24px)) 0 clamp(20px, 3vw, 32px); font-size: var(--step-1); font-weight: 600; color: var(--accent); }
+.hero-email { display: inline-block; margin-top: 12px; color: var(--ink); }
+.masthead nav a { white-space: nowrap; }
+@media (max-width: 600px) {
+  .masthead .name { display: none; }
+  .masthead nav { width: 100%; justify-content: space-between; gap: 12px; }
 }

@@ -4,12 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Tyler Chisholm, technical designer</title>
-  <meta name="description" content="Technical designer who designs game systems and builds them. Design Lead on Everent (UE5, FIEA) and builder of Spatial Engine, a ray-traced renderer for non-Euclidean spaces. Available January 2027.">
+  <meta name="description" content="Tyler Chisholm, technical designer finishing at FIEA. Everent (UE5), Spatial Engine (a Vulkan path tracer that runs in VR), and a native PS Vita port of Star Fox Adventures. Available January 2027.">
   <link rel="canonical" href="https://tylerchisholm.dev/">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tylerchisholm.dev/">
   <meta property="og:title" content="Tyler Chisholm, technical designer">
-  <meta property="og:description" content="I design game systems, then build them. UE5, Unity, Vulkan ray tracing, and VR. Available January 2027.">
+  <meta property="og:description" content="Technical designer. UE5, Unity, Vulkan path tracing, VR. Available January 2027.">
   <meta property="og:image" content="https://tylerchisholm.dev/img/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -18,7 +18,7 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="stylesheet" href="css/site.css?v=6">
+  <link rel="stylesheet" href="css/site.css?v=9">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body data-role="design">
@@ -28,6 +28,7 @@
     <a class="name" href="#top">Tyler Chisholm</a>
     <nav aria-label="Main">
       <a href="#work">Work</a>
+      <a href="#agents">How I work</a>
       <a href="#about">About</a>
       <a href="resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf" data-resume>Résumé</a>
     </nav>
@@ -35,22 +36,23 @@
 
   <main id="top">
     <section class="hero wrap" aria-labelledby="headline">
-      <h1 id="headline">I design game systems, then&nbsp;build&nbsp;them.</h1>
+      <h1 id="headline">Tyler Chisholm</h1>
+      <p class="hero-sub">Technical Designer &middot; UE5 C++ &amp; Blueprint &middot; Available January 2027</p>
 
       <figure class="reel reel-hero">
         <div class="reel-frame" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4">
           <img class="reel-poster" alt="Everent: riding a hoverboard off a sky island at sunset" src="https://i.ytimg.com/vi/xKO3J9afc3U/maxresdefault.jpg" width="1280" height="720" fetchpriority="high">
           <button class="reel-sound" type="button">Play trailer with sound</button>
         </div>
-        <figcaption>Everent, our FIEA capstone, in game. The team trailer runs 0:31.</figcaption>
+        <figcaption>Everent, our FIEA capstone. Team trailer.</figcaption>
       </figure>
 
       <div class="hero-foot">
         <div class="summaries">
-          <p data-for="design">I'm a technical designer. I design mechanics, build them in C++, Blueprint, or C#, and make the editor tools my team uses to tune them. I'm Design Lead on Everent, a UE5 game coming to Steam, and Project Lead on Studio Microdose.</p>
-          <p data-for="rendering">I'm a technical designer who builds renderers. I built a hardware ray-traced Vulkan renderer with ReSTIR, SVGF, and DLSS Ray Reconstruction that clears 90&nbsp;Hz in VR, and I ship UE5 features on a team. I measure before I optimize.</p>
-          <p data-for="simulation">I build real-time 3D systems in UE5 C++: physics, streaming worlds, VR input, and the tools around them, and I back performance work with profiler data. I'm a U.S. citizen and eligible for a security clearance.</p>
-          <p class="avail">I finish my M.S. at FIEA in December 2026 and can start in January 2027. I'm in Orlando and open to relocating.</p>
+          <p data-for="design">Design lead on Everent, a UE5 game headed to Steam, and project lead on Studio Microdose. I design systems and build them in C++, Blueprint or C#, plus the editor tools designers use to tune them.</p>
+          <p data-for="rendering">Technical designer with a rendering focus: a Vulkan path tracer in Rust that runs in VR, a native PS Vita port of Star Fox Adventures, and UE5 lighting and compute work on a team.</p>
+          <p data-for="simulation">UE5 C++ developer: physics, streaming worlds, VR, and the tools around them. U.S. citizen, eligible for a security clearance.</p>
+          <p class="avail">M.S., FIEA (UCF), December 2026. Orlando, open to relocating. U.S. citizen, clearance-eligible.</p>
         </div>
 
         <form class="role" aria-labelledby="role-label">
@@ -61,6 +63,7 @@
             <label><input type="radio" name="role" value="simulation"><span>Real-time and simulation</span></label>
           </div>
           <a class="resume-button" href="resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf" data-resume>Download résumé <span class="pdf">PDF</span></a>
+          <a class="hero-email" href="mailto:tchisholm2020@gmail.com">tchisholm2020@gmail.com</a>
         </form>
       </div>
     </section>
@@ -70,8 +73,8 @@
       <article class="project" id="everent" data-order-design="1" data-order-rendering="3" data-order-simulation="1">
         <header class="project-head">
           <h2>Everent</h2>
-          <p class="role-line">Design Lead, Studio Kismet (FIEA capstone), 2025 to now</p>
-          <p class="pitch">A momentum-based hoverboard game set across an open world of floating sky islands, built in Unreal Engine 5.7 and coming to Steam.</p>
+          <p class="role-line">Design Lead &middot; 7 designers on a 20+ person team &middot; UE5.7 &middot; Oct 2025 to now</p>
+          <p class="pitch">Hoverboard game across floating sky islands where you can ride any surface. Coming to Steam.</p>
         </header>
 
         <figure class="reel">
@@ -79,47 +82,35 @@
             <img class="reel-poster" alt="Everent: speed-gated destruction test in the editor" src="https://i.ytimg.com/vi/FoDRT-KfREg/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
-          <figcaption class="reel-caption" aria-live="polite">Speed-gated destruction, recorded in the editor. Full video 4:13.</figcaption>
+          <figcaption class="reel-caption" aria-live="polite">Speed-gated destruction, recorded in the editor.</figcaption>
         </figure>
 
         <div class="built">
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-loop="media/everent-destruction.mp4" data-caption="Speed-gated destruction, recorded in the editor. Full video 4:13.">Speed-gated destruction<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Walls only break if you hit them hard enough. I built it in C++ on Chaos Geometry Collections. Each frame a sweep looks ahead of the board, and only your speed into the wall counts, so glancing hits don't fire. Above the threshold the wall's blockers switch off a frame early so you keep your momentum, and a strain field with directional and radial velocity shatters it at the impact point. Walls can stay broken, rebuild after a delay, or clear their debris. We use it to hide secrets and to reward players who keep their speed up.</p></div>
+              <button type="button" class="did-head" data-yt="FoDRT-KfREg" data-start="25" data-crop="1.28" data-focus="0% 100%" data-loop="media/everent-destruction.mp4" data-caption="Speed-gated destruction, recorded in the editor.">Speed-gated destruction<span class="has-video">Video</span></button>
+              <div class="did-body"><p>C++ on Chaos Geometry Collections. A sweep ahead of the board measures speed into the wall. Above the threshold the wall stops blocking a frame early, so you keep momentum, then shatters at the impact point. Used to hide secrets.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="tHOblBrVMFQ" data-start="25" data-caption="The destructibles panel in use. Full video 0:41.">Destructibles editor tool<span class="has-video">Video</span></button>
-              <div class="did-body"><p>The Destructible Wall Browser, under the Window menu, lists every destructible in the level, shows its tuning, and fires a test projectile at a chosen point and speed with a camera looking down its flight path. Designers can test hits above and below the threshold and reset the wall without entering Play mode.</p></div>
+              <button type="button" class="did-head" data-yt="tHOblBrVMFQ" data-start="25" data-caption="The destructibles panel in use.">Destructible Wall Browser (editor tool)<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Editor panel listing every destructible in the level with its settings, a test shot at any point and speed, and a reset. Designers tune without entering Play.</p></div>
             </li>
             <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="oAy6t1RdepA" data-start="20" data-crop="1.28" data-focus="0% 100%" data-caption="The respawn system, recorded in the editor. Full video 1:00.">Respawn system<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Fall off an island and you come back to the last place it was safe to stand. Every two seconds a C++ component checks the board: grounded, on a gentle slope, under a speed cap, clear overhead, and on static ground under all five points of its footprint. Designer-placed checkpoints override the sampling and save to disk. On respawn it resets boost, grind, and powerslide state and zeroes the physics velocity before teleporting, so Chaos doesn't fling you on arrival.</p></div>
+              <button type="button" class="did-head" data-yt="oAy6t1RdepA" data-start="20" data-crop="1.28" data-focus="0% 100%" data-caption="The respawn system, recorded in the editor.">Respawn system<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Saves a safe spot every 2 seconds: grounded, slope, speed, overhead clearance, all five footprint points on static ground. Checkpoints override it and save to disk. Velocity and board state are zeroed before the teleport.</p></div>
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head">Corrupt surfaces</button>
-              <div class="did-body"><p>You can ride on any surface in Everent, so puzzles needed a hard limit. I wrote a C++ physical material that pushes the board away with world-space gravity, scales the push by approach angle, and turns off boost.</p></div>
+              <div class="did-body"><p>The one thing you can't ride. A C++ physical material that pushes the board away, scaled by approach angle, and turns off boost.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4" data-caption="The game my team made, in game. The team trailer runs 0:31.">Leading the design team<span class="has-video">Video</span></button>
-              <div class="did-body"><p>I led 7 designers, on a team of 20-plus, from concept through production. I wrote the GDD and the one-page specs for movement, puzzles, and progression, ran sprint planning in Jira, and tuned the DualSense adaptive triggers for each surface type.</p></div>
+              <button type="button" class="did-head" data-yt="xKO3J9afc3U" data-loop="media/everent-ride.mp4" data-caption="Everent team trailer.">Leading the design team<span class="has-video">Video</span></button>
+              <div class="did-body"><p>GDD and specs for movement, puzzles and progression. Sprint planning in Jira. DualSense adaptive-trigger tuning per surface.</p></div>
             </li>
-            <li data-for="rendering">
-              <button type="button" class="did-head">Sky creatures</button>
-              <div class="did-body"><p>I prototyped a compute-shader flocking plugin for the koi, manta rays, and jellyfish that fill the sky. Niagara integration didn't work out, so I switched to instanced meshes driven by CPU readback.</p></div>
-            </li>
-            <li data-for="rendering">
-              <button type="button" class="did-head">Lighting decisions</button>
-              <div class="did-body"><p>I led the call on Lumen versus baked GI, the cost of Virtual Shadow Maps, and our HLOD plan, then wrote the team's graphics settings spec on UGameUserSettings with runtime scalability groups.</p></div>
-            </li>
-            <li data-for="simulation">
-              <button type="button" class="did-head">Streaming-safe destruction</button>
-              <div class="did-body"><p>World Partition streaming broke destructibles in a few ways. I fixed a delegate that was binding twice, resolved overlaps at BeginPlay, and guarded destroy calls against actors that had unloaded.</p></div>
-            </li>
-            <li data-for="design simulation">
-              <button type="button" class="did-head">Playtest analytics</button>
-              <div class="did-body"><p>I built a local pipeline (FFmpeg, faster-whisper, DeepFace, Llama 3.1) that turns playtest recordings into transcripts, emotion timelines, and coded feedback in the spreadsheet format our studio already used.</p></div>
+            <li data-for="design rendering simulation">
+              <button type="button" class="did-head">Also</button>
+              <div class="did-body"><p>Compute-shader flocking for the sky creatures, shipped as instanced meshes after Niagara didn't work out. The Lumen vs. baked GI decision and graphics settings. World Partition fixes for destructibles. A local pipeline that turns playtest recordings into transcripts and coded feedback.</p></div>
             </li>
           </ul>
           <p class="tools">UE5.7, C++, Blueprint, Chaos, World Partition, Perforce, Jira</p>
@@ -129,8 +120,8 @@
       <article class="project" id="spatial-engine" data-order-design="3" data-order-rendering="1" data-order-simulation="2">
         <header class="project-head">
           <h2>Spatial Engine</h2>
-          <p class="role-line">Personal project, 2026 to now</p>
-          <p class="pitch">A path-traced VR engine: a hardware ray-traced Vulkan renderer in Rust, running inside a Godot 4.6 fork. I'm using it to build a VR climbing game on the real Grand Canyon, with physics-driven bodies for you and the NPCs.</p>
+          <p class="role-line">Solo project &middot; Rust, Vulkan ray tracing, OpenXR &middot; 2026 to now</p>
+          <p class="pitch">Path tracer that runs in VR inside a Godot fork. Current game: a VR climb on the real Grand Canyon.</p>
         </header>
 
         <figure class="reel">
@@ -138,40 +129,36 @@
             <img class="reel-poster" alt="Spatial Engine: path-traced Sponza atrium" src="https://i.ytimg.com/vi/3rHi_rX2ivI/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
-          <figcaption class="reel-caption" aria-live="polite">Path tracing in Sponza. Full video 2:31.</figcaption>
+          <figcaption class="reel-caption" aria-live="polite">Path tracing in Sponza.</figcaption>
         </figure>
 
         <div class="built">
-          <p class="how">How I build it: I own the architecture and direction, and AI writes much of the code. I set the goals and the tests, read the GPU timings, and make the final call in the headset. It's about 115k lines of Rust and 40k of HLSL across 13 crates, with 680+ commits.</p>
+          <p class="how">About 115k lines of Rust and 40k of HLSL, mostly written by agents I direct (<a href="#agents">how</a>).</p>
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="3rHi_rX2ivI" data-start="70" data-loop="media/spatial-sponza.mp4" data-caption="Path tracing in Sponza. Full video 2:31.">Path-traced lighting<span class="has-video">Video</span></button>
-              <div class="did-body"><p>ReSTIR direct lighting, one-bounce diffuse GI, SVGF denoising, a physically based sky and volumetric atmosphere, and DLSS Ray Reconstruction. Curved primitives use analytic intersection shaders.</p></div>
+              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="80" data-caption="Running in a VR headset.">VR at 90 Hz<span class="has-video">Video</span></button>
+              <div class="did-body"><p>On a Quest over Link with a laptop RTX card, across about 900&nbsp;km of streamed terrain with volumetric clouds. Every feature gets a stereo frame budget before it's built.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="hlEWcZz3VDs" data-start="10" data-crop="1.45" data-focus="50% 70%" data-caption="A non-Euclidean test in the Godot editor. Full video 0:30.">Connected spaces<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Portals join rooms with different curvature. Rays continue through a portal into the next space, so lighting and shadows stay consistent across the seam.</p></div>
+              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR.">Physical bodies<span class="has-video">Video</span></button>
+              <div class="did-body"><p>The player is a Jolt active ragdoll with a contact-based support model for walking and climbing. NPCs are powered ragdolls with a wound list: stab, stick, carve, fractures, bleeding, knockouts.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="80" data-caption="Running in a VR headset. Full video 3:59.">Path tracing in VR<span class="has-video">Video</span></button>
-              <div class="did-body"><p>The full path tracer runs in VR and clears 90&nbsp;Hz on a Quest over Link cable on modest RTX hardware, across about 900&nbsp;km of streamed terrain with volumetric clouds. I profile it pass by pass in Nsight with the headset on.</p></div>
+              <button type="button" class="did-head">Grand Canyon</button>
+              <div class="did-body"><p>USGS 3DEP lidar, 10 rock formations, look tuned against real photos from matched camera positions.</p></div>
             </li>
-            <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="U7XHXQE9ohs" data-start="10" data-loop="media/spatial-vr-hands.mp4" data-caption="Grabbing and handling objects in VR. Full video 3:59.">Physical bodies<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Your body in VR is a Jolt active ragdoll that follows your tracked movement, with a contact-based support model for walking and climbing. NPCs use powered ragdolls with a wound list: a knife can stab, stick, or carve, and wounds and fractures drive bleeding and knockouts.</p></div>
+            <li data-for="rendering">
+              <button type="button" class="did-head" data-yt="3rHi_rX2ivI" data-start="70" data-loop="media/spatial-sponza.mp4" data-caption="Path tracing in Sponza.">Lighting<span class="has-video">Video</span></button>
+              <div class="did-body"><p>ReSTIR direct lighting, one-bounce diffuse GI, SVGF, physical sky and atmosphere, DLSS Ray Reconstruction. Analytic intersection shaders for curved shapes.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head">The Grand Canyon slice</button>
-              <div class="did-body"><p>The current game is a climb on the real Grand Canyon. The terrain comes from USGS 3DEP lidar, the rock is split into 10 geologic formations, and I tune the look against real photos matched to the same camera position. Every new feature gets a stereo frame budget at 90&nbsp;Hz before it's built.</p></div>
+              <button type="button" class="did-head" data-yt="hlEWcZz3VDs" data-start="10" data-crop="1.45" data-focus="50% 70%" data-caption="A non-Euclidean test in the Godot editor.">Portals<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Portals between spaces of different curvature, with light traced through them.</p></div>
             </li>
             <li data-for="rendering simulation">
-              <button type="button" class="did-head">A shader regression</button>
-              <div class="did-body"><p>GPU timestamps showed a cylinder intersection shader taking far too long. I replaced its 64-step sphere tracer with an analytic quadratic solve.</p></div>
-            </li>
-            <li data-for="design rendering simulation">
-              <button type="button" class="did-head">Running inside Godot</button>
-              <div class="did-body"><p>The renderer sits behind a C ABI inside a Godot fork, so Godot handles the editor, scripting, and asset pipeline.</p></div>
+              <button type="button" class="did-head">Cylinder regression</button>
+              <div class="did-body"><p>Found with GPU timestamps: a 64-step sphere tracer, replaced with an analytic solve.</p></div>
             </li>
           </ul>
           <p class="tools">Rust, Vulkan ray tracing, HLSL, OpenXR, Godot, Nsight Graphics</p>
@@ -181,8 +168,8 @@
       <article class="project" id="pocket-spaces" data-order-design="2" data-order-rendering="4" data-order-simulation="3">
         <header class="project-head">
           <h2>Pocket Spaces</h2>
-          <p class="role-line">Solo Unity prototype, 2026</p>
-          <p class="pitch">Doorways that open onto rooms bigger than the building around them. The player, physics objects, and ropes can all pass through.</p>
+          <p class="role-line">Solo prototype &middot; Unity, C# &middot; 2026</p>
+          <p class="pitch">Doorways into rooms bigger than the building around them.</p>
         </header>
 
         <figure class="reel">
@@ -190,31 +177,27 @@
             <img class="reel-poster" alt="Pocket Spaces: a row of doors in a white test room" src="https://i.ytimg.com/vi/8AvQAyXFCWM/maxresdefault.jpg" width="1280" height="720" loading="lazy">
             <button class="reel-sound" type="button">Play with sound</button>
           </div>
-          <figcaption class="reel-caption" aria-live="polite">Walking through the portal rooms. Full video 1:56.</figcaption>
+          <figcaption class="reel-caption" aria-live="polite">Walking through the portal rooms.</figcaption>
         </figure>
 
         <div class="built">
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-doorway.mp4" data-caption="Walking through the portal rooms. Full video 1:56.">Doorways<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Each doorway uses stencil masking to show a room larger than the outside of the building. A player state machine, per-object portal membership, and gravity overrides let the player and physics objects cross cleanly.</p></div>
+              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="4" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-doorway.mp4" data-caption="Walking through the portal rooms.">Doorways<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Stencil-masked doors into bigger rooms. The player, physics objects with per-room gravity, and a rope all cross.</p></div>
             </li>
             <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="Zdyo_BKNpn8" data-start="85" data-crop="1.17" data-focus="50% 50%" data-caption="Objects moving between rooms. Full video 1:46.">Objects crossing<span class="has-video">Video</span></button>
-              <div class="did-body"><p>Physics objects move between rooms and switch to the new room's gravity as they cross.</p></div>
-            </li>
-            <li data-for="design simulation">
-              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="60" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-rope.mp4" data-caption="The rope and grapple through a doorway. Full video 1:56.">Rope through doorways<span class="has-video">Video</span></button>
-              <div class="did-body"><p>A Verlet rope and grapple that keeps working through doorways, with a renderer that draws the rope across the portal.</p></div>
+              <button type="button" class="did-head" data-yt="8AvQAyXFCWM" data-start="60" data-crop="1.15" data-focus="50% 55%" data-loop="media/pocket-rope.mp4" data-caption="The rope and grapple through a doorway.">Rope and grapple<span class="has-video">Video</span></button>
+              <div class="did-body"><p>Verlet rope that keeps working through a doorway, drawn on both sides.</p></div>
             </li>
             <li data-for="design simulation">
               <button type="button" class="did-head">Room builder</button>
-              <div class="did-body"><p>A one-click procedural room builder with a custom inspector to build, rebuild, eject a room's contents, and preview its gravity.</p></div>
+              <div class="did-body"><p>One-click room builder with a custom inspector.</p></div>
             </li>
             <li data-for="rendering">
-              <button type="button" class="did-head">A hyperbolic room</button>
-              <div class="did-body"><p>One room holds a raymarched hyperbolic Mandelbox with Möbius-transform camera movement. I also documented where stencil nesting fails: at depth 3 the render queue falls apart.</p></div>
+              <button type="button" class="did-head">Hyperbolic room</button>
+              <div class="did-body"><p>Raymarched hyperbolic Mandelbox with Möbius-transform movement. Stencil nesting breaks at depth 3.</p></div>
             </li>
           </ul>
           <p class="tools">Unity URP, C#, stencil rendering, editor tooling</p>
@@ -224,8 +207,8 @@
       <article class="project" id="sfa-vita" data-order-design="4" data-order-rendering="2" data-order-simulation="4">
         <header class="project-head">
           <h2>Star Fox Adventures on PS Vita</h2>
-          <p class="role-line">Personal project, 2026. Released, <a href="https://github.com/tchisholm20/starfox-adventures-vita">source on GitHub</a></p>
-          <p class="pitch">Star Fox Adventures running natively on a PS Vita. The decompiled GameCube game is compiled for the Vita's ARM CPU, not emulated, and I wrote the graphics backend that makes it draw.</p>
+          <p class="role-line">Solo project &middot; C, GXM &middot; released 2026 &middot; <a href="https://github.com/tchisholm20/starfox-adventures-vita">source on GitHub</a></p>
+          <p class="pitch">Star Fox Adventures running natively on a PS Vita, not emulated. I wrote the graphics backend.</p>
         </header>
 
         <figure class="reel">
@@ -237,20 +220,20 @@
         </figure>
 
         <div class="built">
-          <p class="how">Built on SFA-Decomp by Zachary Canann, Jack Price-Burns and contributors, and the PC port branch by Cassieandstuff. No game data is included; players supply their own disc. I own the architecture and the decisions, and AI writes much of the code.</p>
+          <p class="how">Built on SFA-Decomp (Zachary Canann, Jack Price-Burns and contributors) and Cassieandstuff's PC port. No game data included.</p>
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
               <button type="button" class="did-head" data-yt="RpsG4do0GE8" data-caption="Running on a real PS Vita.">GX to GXM<span class="has-video">Video</span></button>
-              <div class="did-body"><p>The game calls the GameCube's GX graphics API. I wrote the backend that translates those calls to GXM, the Vita's native graphics API, without editing the upstream port.</p></div>
+              <div class="did-body"><p>Translates the GameCube's GX graphics API to GXM, the Vita's native API, with no changes to the upstream port.</p></div>
             </li>
             <li data-for="design rendering simulation">
               <button type="button" class="did-head">Shaders and geometry</button>
-              <div class="did-body"><p>TEV combiner setups compile into shaders that are cached on the memory card. Display lists become vertex buffers on first draw and are reused, and animated characters are skinned on the GPU.</p></div>
+              <div class="did-body"><p>TEV combiners compiled to cached shaders. Display lists converted to vertex buffers on first draw. GPU skinning.</p></div>
             </li>
             <li data-for="design rendering simulation">
-              <button type="button" class="did-head">Threads and profiling</button>
-              <div class="did-body"><p>The game loop and the renderer run on separate CPU cores. I built on-device profiling and A/B harnesses and tuned from measured frame data. Most areas hold 30&nbsp;fps at 640&times;368.</p></div>
+              <button type="button" class="did-head">Performance</button>
+              <div class="did-body"><p>Game and render threads on separate cores. 30&nbsp;fps at 640&times;368 in most areas.</p></div>
             </li>
           </ul>
           <p class="tools">C, GXM, VitaSDK, vitaGL, ARM</p>
@@ -258,23 +241,36 @@
       </article>
     </section>
 
+    <section id="agents" class="also wrap" aria-labelledby="agents-title">
+      <h2 id="agents-title">How I work with agents</h2>
+      <p class="also-intro">Most of my personal code is written by AI agents, often several at once. The setup:</p>
+      <dl>
+        <div><dt>Backlog</dt><dd>Linear, with at most five things in progress. Every issue needs a "done when"; engine features also need a stereo frame budget.</dd></div>
+        <div><dt>Verified numbers</dt><dd>Gates that refuse to report a performance number unless the run was clean: refresh rate, power trace, sample count. Visual changes need a pre-registered threshold and a human look at the images.</dd></div>
+        <div><dt>Concurrency</dt><dd>Agents claim files and lock the GPU, headset and engine build. Every test is tied to the hash of the build it ran on.</dd></div>
+        <div><dt>Review</dt><dd>Separate reviewer agents try to break big designs before they're built.</dd></div>
+        <div><dt>Cost</dt><dd>Every session is booked to a Linear issue: 179 sessions, 571 subagents, about 570 agent-hours as of November.</dd></div>
+        <div><dt>Research</dt><dd>A local knowledge base of rendering papers (arXiv, SIGGRAPH and others) that agents search for prior art.</dd></div>
+      </dl>
+    </section>
+
     <section class="also wrap" aria-labelledby="also-title">
       <h2 id="also-title">Also built</h2>
       <dl>
-        <div><dt>Studio Microdose</dt><dd>I'm Project Lead on a 10-person FIEA Ventures team making a co-op game about catching invasive animals by hand in the Everglades.</dd></div>
-        <div><dt>The Ascent</dt><dd>A physics climbing game in Unity. A reference skeleton drives ConfigurableJoint targets, IK places the arms using wall normals, and grip force is applied at the wrist. I also built a ragdoll setup tool for it.</dd></div>
-        <div><dt>Asymmetric VR rally</dt><dd>One player drives in VR while a co-driver plays on the screen. I wrote an input layer that treats the wheel, pedals, and controllers the same way, plus seated calibration.</dd></div>
-        <div><dt>MetaHuman facial capture</dt><dd>A facial performance recorded with Live Link Face on an iPhone, applied to a MetaHuman, and rendered in Sequencer.</dd></div>
-        <div><dt>Kingdom Come: Deliverance II quest mod</dt><dd>A scavenger hunt with letter-based delivery, an over-encumbrance mechanic, and a twist ending at Trosky Castle, packaged with a build script.</dd></div>
-        <div><dt>Noita wand model</dt><dd>A spreadsheet model of wands as a mana economy (charge, drain, cast delay, damage conversion). I checked its DPS predictions in game.</dd></div>
+        <div><dt>Studio Microdose</dt><dd>I'm leading a 10-person FIEA Ventures team on a co-op game about catching invasive animals by hand in the Everglades.</dd></div>
+        <div><dt>The Ascent</dt><dd>A Unity climbing game where a reference skeleton drives the joints, IK puts your hands on the wall, and grip force comes from the wrist. Plus a tool to set up the ragdoll.</dd></div>
+        <div><dt>Asymmetric VR rally</dt><dd>One player drives in VR, the other co-drives on a screen. The wheel, pedals and controllers all go through one input layer.</dd></div>
+        <div><dt>MetaHuman facial capture</dt><dd>Recorded my face with Live Link on an iPhone, put it on a MetaHuman, and rendered it in Sequencer.</dd></div>
+        <div><dt>Kingdom Come: Deliverance II quest mod</dt><dd>A scavenger hunt delivered by letters, with an over-encumbrance mechanic and a twist ending at Trosky Castle.</dd></div>
+        <div><dt>Noita wand model</dt><dd>A spreadsheet that models Noita's wands as a mana economy. I checked its DPS predictions against the game.</dd></div>
       </dl>
     </section>
 
     <section id="about" class="about wrap" aria-labelledby="about-title">
       <h2 id="about-title">About</h2>
       <div class="about-body">
-        <p>I'm finishing my M.S. in Interactive Entertainment at FIEA, UCF's graduate game program, in December 2026. I've built 12 games there over four semesters in Unreal, Unity, and VR. Before that I studied finance and entrepreneurship at Stetson University and did QA on iOS apps at Stormbreaker Studios.</p>
-        <p>I live in Orlando, I'm open to relocating, and I can start in January 2027. I'm a U.S. citizen and eligible for a security clearance.</p>
+        <p>M.S. Interactive Entertainment, FIEA (UCF), December 2026. 12 games in four semesters. B.B.A. in finance and entrepreneurship from Stetson. QA on iOS apps at Stormbreaker Studios in 2020.</p>
+        <p>Orlando, open to relocating. Available January 2027. U.S. citizen, eligible for a security clearance.</p>
       </div>
       <div class="contact">
         <a class="email" href="mailto:tchisholm2020@gmail.com">tchisholm2020@gmail.com</a>
