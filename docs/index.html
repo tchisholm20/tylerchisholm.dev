@@ -18,7 +18,7 @@
   <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="fonts/bricolage-grotesque.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preconnect" href="https://i.ytimg.com">
-  <link rel="stylesheet" href="css/site.css?v=9">
+  <link rel="stylesheet" href="css/site.css?v=10">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body data-role="design">
@@ -28,7 +28,7 @@
     <a class="name" href="#top">Tyler Chisholm</a>
     <nav aria-label="Main">
       <a href="#work">Work</a>
-      <a href="#agents">How I work</a>
+      <a href="#agents" data-for="rendering simulation">How I work</a>
       <a href="#about">About</a>
       <a href="resumes/Tyler_Chisholm_Resume_Technical_Designer.pdf" data-resume>Résumé</a>
     </nav>
@@ -133,7 +133,7 @@
         </figure>
 
         <div class="built">
-          <p class="how">About 115k lines of Rust and 40k of HLSL, mostly written by agents I direct (<a href="#agents">how</a>).</p>
+          <p class="how">About 115k lines of Rust and 40k of HLSL, mostly written by agents I direct<span data-for="rendering simulation"> (<a href="#agents">how</a>)</span>.</p>
           <h3 class="did-title">What I did</h3>
           <ul class="did">
             <li data-for="design rendering simulation">
@@ -241,10 +241,11 @@
       </article>
     </section>
 
-    <section id="agents" class="also wrap" aria-labelledby="agents-title">
+    <section id="agents" class="also wrap" data-for="rendering simulation" aria-labelledby="agents-title">
       <h2 id="agents-title">How I work with agents</h2>
-      <p class="also-intro">Most of my personal code is written by AI agents, often several at once. The setup:</p>
-      <dl>
+      <div class="also-body">
+        <p class="also-intro">On personal projects I direct AI coding agents, often several at once. What keeps that honest:</p>
+        <dl>
         <div><dt>Backlog</dt><dd>Linear, with at most five things in progress. Every issue needs a "done when"; engine features also need a stereo frame budget.</dd></div>
         <div><dt>Verified numbers</dt><dd>Gates that refuse to report a performance number unless the run was clean: refresh rate, power trace, sample count. Visual changes need a pre-registered threshold and a human look at the images.</dd></div>
         <div><dt>Concurrency</dt><dd>Agents claim files and lock the GPU, headset and engine build. Every test is tied to the hash of the build it ran on.</dd></div>
@@ -252,6 +253,7 @@
         <div><dt>Cost</dt><dd>Every session is booked to a Linear issue: 179 sessions, 571 subagents, about 570 agent-hours as of November.</dd></div>
         <div><dt>Research</dt><dd>A local knowledge base of rendering papers (arXiv, SIGGRAPH and others) that agents search for prior art.</dd></div>
       </dl>
+      </div>
     </section>
 
     <section class="also wrap" aria-labelledby="also-title">

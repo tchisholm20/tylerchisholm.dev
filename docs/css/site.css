@@ -202,6 +202,7 @@ p { margin: 0; }
 .also { padding: clamp(40px, 6vw, 72px) 0; border-top: 1.5px solid var(--line); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 3fr); gap: 24px clamp(24px, 4vw, 56px); }
 .also h2, .about h2 { font-size: var(--step-2); font-stretch: 80%; letter-spacing: -0.01em; line-height: 1; }
 .also dl { margin: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(24px, 4vw, 48px); }
+.also-intro { margin: 0 0 8px; max-width: 60ch; }
 .also dl div { padding: 16px 0; border-top: 1px solid var(--rule); }
 .also dt { font-weight: 680; }
 .also dd { margin: 4px 0 0; color: var(--ink-2); max-width: 52ch; }
